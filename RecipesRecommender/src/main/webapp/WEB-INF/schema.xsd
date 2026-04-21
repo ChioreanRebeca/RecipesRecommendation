@@ -5,7 +5,7 @@
         <xs:complexType>
             <xs:sequence>
 
-                <xs:element name="User">
+                <xs:element name="User" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="FirstName" type="xs:string"/>
