@@ -1,228 +1,347 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Data>
-      
-    <User>
-            
-        <FirstName>John</FirstName>
-            
-        <LastName>Doe</LastName>
-            
-        <SkillLevel>Intermediate</SkillLevel>
-            
-        <PreferredCuisine>Italian</PreferredCuisine>
           
-    </User>
-      
-    <User>
-        <FirstName>Chiorean</FirstName>
-        <LastName>Rebeca</LastName>
-        <SkillLevel>Advanced</SkillLevel>
-        <PreferredCuisine>Italian</PreferredCuisine>
-    </User>
-
-
-    <Recipes>
-            
-        <Recipe>
-                  
-            <Title>Creamy pumpkin pasta</Title>
-                  
-            <CuisineType>Italian</CuisineType>
-                  
-            <Difficulty>Intermediate</Difficulty>
-                
-        </Recipe>
-            
-        <Recipe>
-                  
-            <Title>Sausage, mustard and apple hash</Title>
-                  
-            <CuisineType>Italian</CuisineType>
-                  
-            <Difficulty>Intermediate</Difficulty>
-                
-        </Recipe>
-            
-        <Recipe>
-                  
-            <Title>Mushroom stroganoff</Title>
-                  
-            <CuisineType>Italian</CuisineType>
-                  
-            <Difficulty>Intermediate</Difficulty>
-                
-        </Recipe>
-            
-        <Recipe>
-                  
-            <Title>Butternut squash and white bean tagliatelle</Title>
-                  
-            <CuisineType>Italian</CuisineType>
-                  
-            <Difficulty>Beginner</Difficulty>
-                
-        </Recipe>
-            
-        <Recipe>
-                  
-            <Title>Beetroot and feta pasta</Title>
-                  
-            <CuisineType>Asian</CuisineType>
-                  
-            <Difficulty>Beginner</Difficulty>
-                
-        </Recipe>
-            
-        <Recipe>
-                  
-            <Title>Pork and apple burgers</Title>
-                  
-            <CuisineType>Asian</CuisineType>
-                  
-            <Difficulty>Advanced</Difficulty>
-                
-        </Recipe>
-            
-        <Recipe>
-                  
-            <Title>Mushroom soup</Title>
-                  
-            <CuisineType>Italian</CuisineType>
-                  
-            <Difficulty>Beginner</Difficulty>
-                
-        </Recipe>
-            
-        <Recipe>
-                  
-            <Title>Squash and halloumi flatbreads with sweet chilli beetroot jam</Title>
-                  
-            <CuisineType>Italian</CuisineType>
-                  
-            <Difficulty>Beginner</Difficulty>
-                
-        </Recipe>
-            
-        <Recipe>
-                  
-            <Title>Simple squash risotto</Title>
-                  
-            <CuisineType>Italian</CuisineType>
-                  
-            <Difficulty>Intermediate</Difficulty>
-                
-        </Recipe>
-            
-        <Recipe>
-                  
-            <Title>Creamy beans</Title>
-                  
-            <CuisineType>Asian</CuisineType>
-                  
-            <Difficulty>Intermediate</Difficulty>
-                
-        </Recipe>
-            
-        <Recipe>
-                  
-            <Title>Slow cooker spiced root and lentil casserole</Title>
-                  
-            <CuisineType>Italian</CuisineType>
-                  
-            <Difficulty>Intermediate</Difficulty>
-                
-        </Recipe>
-            
-        <Recipe>
-                  
-            <Title>Squash and spinach fusilli with pecans</Title>
-                  
-            <CuisineType>Italian</CuisineType>
-                  
-            <Difficulty>Intermediate</Difficulty>
-                
-        </Recipe>
-            
-        <Recipe>
-                  
-            <Title>Easy vegetable curry</Title>
-                  
-            <CuisineType>Italian</CuisineType>
-                  
-            <Difficulty>Beginner</Difficulty>
-                
-        </Recipe>
-            
-        <Recipe>
-                  
-            <Title>Sausage and butternut squash shells</Title>
-                  
-            <CuisineType>Asian</CuisineType>
-                  
-            <Difficulty>Intermediate</Difficulty>
-                
-        </Recipe>
-            
-        <Recipe>
-                  
-            <Title>Autumn vegetable soup with cheesy toasts</Title>
-                  
-            <CuisineType>Italian</CuisineType>
-                  
-            <Difficulty>Beginner</Difficulty>
-                
-        </Recipe>
-            
-        <Recipe>
-                  
-            <Title>Mushroom and sausage pasta</Title>
-                  
-            <CuisineType>Italian</CuisineType>
-                  
-            <Difficulty>Advanced</Difficulty>
-                
-        </Recipe>
-            
-        <Recipe>
-                  
-            <Title>Creamy pumpkin and lentil soup</Title>
-                  
-            <CuisineType>Asian</CuisineType>
-                  
-            <Difficulty>Beginner</Difficulty>
-                
-        </Recipe>
-            
-        <Recipe>
-                  
-            <Title>Curried parsnip soup</Title>
-                  
-            <CuisineType>Asian</CuisineType>
-                  
-            <Difficulty>Beginner</Difficulty>
-                
-        </Recipe>
-            
-        <Recipe>
-                  
-            <Title>Red onion gravy</Title>
-                  
-            <CuisineType>Italian</CuisineType>
-                  
-            <Difficulty>Intermediate</Difficulty>
-                
-        </Recipe>
-            
-        <Recipe>
-                  
-            <Title>Butternut squash pilaf</Title>
-                  
-            <CuisineType>Asian</CuisineType>
-                  
-            <Difficulty>Beginner</Difficulty>
-                
-        </Recipe>
-          
-    </Recipes>
     
+    <User>
+                    
+        
+        <FirstName>John</FirstName>
+                    
+        
+        <LastName>Doe</LastName>
+                    
+        
+        <SkillLevel>Intermediate</SkillLevel>
+                    
+        
+        <PreferredCuisine>Italian</PreferredCuisine>
+                  
+    
+    </User>
+          
+    
+    <User>
+                
+        <FirstName>Chiorean</FirstName>
+                
+        <LastName>Rebeca</LastName>
+                
+        <SkillLevel>Advanced</SkillLevel>
+                
+        <PreferredCuisine>Italian</PreferredCuisine>
+            
+    </User>
+        
+    <User>
+        <FirstName>Naomi</FirstName>
+        <LastName>Lita</LastName>
+        <SkillLevel>Beginner</SkillLevel>
+        <PreferredCuisine>Asian</PreferredCuisine>
+    </User>
+    <Recipes>
+                    
+        
+        <Recipe>
+                              
+            
+            <Title>Creamy pumpkin pasta</Title>
+                              
+            
+            <CuisineType>Italian</CuisineType>
+                              
+            
+            <Difficulty>Intermediate</Difficulty>
+                            
+        
+        </Recipe>
+                    
+        
+        <Recipe>
+                              
+            
+            <Title>Sausage, mustard and apple hash</Title>
+                              
+            
+            <CuisineType>Italian</CuisineType>
+                              
+            
+            <Difficulty>Intermediate</Difficulty>
+                            
+        
+        </Recipe>
+                    
+        
+        <Recipe>
+                              
+            
+            <Title>Mushroom stroganoff</Title>
+                              
+            
+            <CuisineType>Italian</CuisineType>
+                              
+            
+            <Difficulty>Intermediate</Difficulty>
+                            
+        
+        </Recipe>
+                    
+        
+        <Recipe>
+                              
+            
+            <Title>Butternut squash and white bean tagliatelle</Title>
+                              
+            
+            <CuisineType>Italian</CuisineType>
+                              
+            
+            <Difficulty>Beginner</Difficulty>
+                            
+        
+        </Recipe>
+                    
+        
+        <Recipe>
+                              
+            
+            <Title>Beetroot and feta pasta</Title>
+                              
+            
+            <CuisineType>Asian</CuisineType>
+                              
+            
+            <Difficulty>Beginner</Difficulty>
+                            
+        
+        </Recipe>
+                    
+        
+        <Recipe>
+                              
+            
+            <Title>Pork and apple burgers</Title>
+                              
+            
+            <CuisineType>Asian</CuisineType>
+                              
+            
+            <Difficulty>Advanced</Difficulty>
+                            
+        
+        </Recipe>
+                    
+        
+        <Recipe>
+                              
+            
+            <Title>Mushroom soup</Title>
+                              
+            
+            <CuisineType>Italian</CuisineType>
+                              
+            
+            <Difficulty>Beginner</Difficulty>
+                            
+        
+        </Recipe>
+                    
+        
+        <Recipe>
+                              
+            
+            <Title>Squash and halloumi flatbreads with sweet chilli beetroot jam</Title>
+                              
+            
+            <CuisineType>Italian</CuisineType>
+                              
+            
+            <Difficulty>Beginner</Difficulty>
+                            
+        
+        </Recipe>
+                    
+        
+        <Recipe>
+                              
+            
+            <Title>Simple squash risotto</Title>
+                              
+            
+            <CuisineType>Italian</CuisineType>
+                              
+            
+            <Difficulty>Intermediate</Difficulty>
+                            
+        
+        </Recipe>
+                    
+        
+        <Recipe>
+                              
+            
+            <Title>Creamy beans</Title>
+                              
+            
+            <CuisineType>Asian</CuisineType>
+                              
+            
+            <Difficulty>Intermediate</Difficulty>
+                            
+        
+        </Recipe>
+                    
+        
+        <Recipe>
+                              
+            
+            <Title>Slow cooker spiced root and lentil casserole</Title>
+                              
+            
+            <CuisineType>Italian</CuisineType>
+                              
+            
+            <Difficulty>Intermediate</Difficulty>
+                            
+        
+        </Recipe>
+                    
+        
+        <Recipe>
+                              
+            
+            <Title>Squash and spinach fusilli with pecans</Title>
+                              
+            
+            <CuisineType>Italian</CuisineType>
+                              
+            
+            <Difficulty>Intermediate</Difficulty>
+                            
+        
+        </Recipe>
+                    
+        
+        <Recipe>
+                              
+            
+            <Title>Easy vegetable curry</Title>
+                              
+            
+            <CuisineType>Italian</CuisineType>
+                              
+            
+            <Difficulty>Beginner</Difficulty>
+                            
+        
+        </Recipe>
+                    
+        
+        <Recipe>
+                              
+            
+            <Title>Sausage and butternut squash shells</Title>
+                              
+            
+            <CuisineType>Asian</CuisineType>
+                              
+            
+            <Difficulty>Intermediate</Difficulty>
+                            
+        
+        </Recipe>
+                    
+        
+        <Recipe>
+                              
+            
+            <Title>Autumn vegetable soup with cheesy toasts</Title>
+                              
+            
+            <CuisineType>Italian</CuisineType>
+                              
+            
+            <Difficulty>Beginner</Difficulty>
+                            
+        
+        </Recipe>
+                    
+        
+        <Recipe>
+                              
+            
+            <Title>Mushroom and sausage pasta</Title>
+                              
+            
+            <CuisineType>Italian</CuisineType>
+                              
+            
+            <Difficulty>Advanced</Difficulty>
+                            
+        
+        </Recipe>
+                    
+        
+        <Recipe>
+                              
+            
+            <Title>Creamy pumpkin and lentil soup</Title>
+                              
+            
+            <CuisineType>Asian</CuisineType>
+                              
+            
+            <Difficulty>Beginner</Difficulty>
+                            
+        
+        </Recipe>
+                    
+        
+        <Recipe>
+                              
+            
+            <Title>Curried parsnip soup</Title>
+                              
+            
+            <CuisineType>Asian</CuisineType>
+                              
+            
+            <Difficulty>Beginner</Difficulty>
+                            
+        
+        </Recipe>
+                    
+        
+        <Recipe>
+                              
+            
+            <Title>Red onion gravy</Title>
+                              
+            
+            <CuisineType>Italian</CuisineType>
+                              
+            
+            <Difficulty>Intermediate</Difficulty>
+                            
+        
+        </Recipe>
+                    
+        
+        <Recipe>
+                              
+            
+            <Title>Butternut squash pilaf</Title>
+                              
+            
+            <CuisineType>Asian</CuisineType>
+                              
+            
+            <Difficulty>Beginner</Difficulty>
+                            
+        
+        </Recipe>
+                  
+    
+    </Recipes>
+        
+
 </Data>

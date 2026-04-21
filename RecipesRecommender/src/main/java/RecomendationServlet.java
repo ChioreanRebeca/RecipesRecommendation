@@ -27,8 +27,12 @@ public class RecomendationServlet extends HttpServlet {
 
         String filterType = request.getParameter("filterType");
         String specificCuisine = request.getParameter("specificCuisine");
+        String currentUser = (String) request.getSession().getAttribute("currentUser");
+
 
         out.println("<html><head><title>Recipe Recommendations</title>");
+
+        //css part
         out.println("<style>");
         out.println("body { font-family: Arial, sans-serif; padding: 20px; background-color: #f4f7f6; color: #333; }");
         out.println(".card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); max-width: 900px; margin: auto; }");
@@ -41,6 +45,7 @@ public class RecomendationServlet extends HttpServlet {
         out.println("th { background-color: #4CAF50; color: white; }");
         out.println("</style></head><body>");
 
+        request.getRequestDispatcher("/navbar.jsp").include(request, response);
         out.println("<div class='card'>");
         out.println("<h2 style='text-align:center; color: #2e7d32; margin-bottom: 30px;'>Recommendation Dashboard</h2>");
 
@@ -94,14 +99,20 @@ public class RecomendationServlet extends HttpServlet {
                 String recipeExpr = "";
                 String resultMessage = "";
 
+                String userXPath = "/Data/User[1]"; //fallback
+
+                if (currentUser != null && !currentUser.isEmpty()) {
+                    userXPath = "/Data/User[concat(FirstName, ' ', LastName)='" + currentUser + "']";
+                }
+
                 if ("req6".equals(filterType)) {
-                    String userSkill = (String) xpath.evaluate("/Data/User[1]/SkillLevel/text()", doc, XPathConstants.STRING);
+                    String userSkill = (String) xpath.evaluate(userXPath + "/SkillLevel/text()", doc, XPathConstants.STRING);
                     recipeExpr = "/Data/Recipes/Recipe[Difficulty='" + userSkill + "']";
                     resultMessage = "Showing recipes matching your Skill Level: <strong>" + userSkill + "</strong>";
 
                 } else if ("req7".equals(filterType)) {
-                    String userSkill = (String) xpath.evaluate("/Data/User[1]/SkillLevel/text()", doc, XPathConstants.STRING);
-                    String userCuisine = (String) xpath.evaluate("/Data/User[1]/PreferredCuisine/text()", doc, XPathConstants.STRING);
+                    String userSkill = (String) xpath.evaluate(userXPath + "/SkillLevel/text()", doc, XPathConstants.STRING);
+                    String userCuisine = (String) xpath.evaluate(userXPath + "/PreferredCuisine/text()", doc, XPathConstants.STRING);
                     recipeExpr = "/Data/Recipes/Recipe[Difficulty='" + userSkill + "' and CuisineType='" + userCuisine + "']";
                     resultMessage = "Showing perfect matches for Skill (<strong>" + userSkill + "</strong>) AND Cuisine (<strong>" + userCuisine + "</strong>)";
 

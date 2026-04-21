@@ -1,11 +1,12 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Insert User Data</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; }
-        .form-container { max-width: 400px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        body { font-family: Arial, sans-serif; background-color: #f9f9f9; margin: 0; padding: 0; }
+        .form-container { max-width: 400px; margin: 40px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
         input[type="text"], select { width: 100%; padding: 10px; margin: 8px 0 15px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
         input[type="submit"] { width: 100%; background-color: #4CAF50; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
         input[type="submit"]:hover { background-color: #45a049; }
@@ -13,9 +14,10 @@
 </head>
 <body>
 
+<jsp:include page="navbar-simple.jsp" />
+
 <div class="form-container">
     <h2 style="text-align: center; color: #333;">Insert User Data</h2>
-
     <form action="addUser" method="POST">
         <label>First Name:</label>
         <input type="text" name="firstName" required>
@@ -30,7 +32,7 @@
             <option value="Advanced">Advanced</option>
         </select>
 
-        <label>Preferred Cuisine Type:</label>
+        <label>Preferred Cuisine:</label>
         <select name="preferredCuisine">
             <option value="Italian">Italian</option>
             <option value="Asian">Asian</option>

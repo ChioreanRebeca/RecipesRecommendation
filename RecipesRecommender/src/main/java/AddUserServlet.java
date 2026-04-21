@@ -1,5 +1,3 @@
-package com.app;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -69,6 +67,8 @@ public class AddUserServlet extends HttpServlet {
             DOMSource source = new DOMSource(doc);
             StreamResult result = new StreamResult(xmlFile);
             transformer.transform(source, result);
+
+            response.sendRedirect(request.getContextPath() + "/recipes");
 
         } catch (Exception e) {
             e.printStackTrace();

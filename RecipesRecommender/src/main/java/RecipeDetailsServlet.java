@@ -1,4 +1,3 @@
-package com.app;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -32,6 +31,8 @@ public class RecipeDetailsServlet extends HttpServlet {
         out.println("<html><head><title>Recipe Details</title>");
         out.println("<style>body { font-family: Arial; padding: 20px; } .card { border: 1px solid #ddd; padding: 20px; max-width: 400px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); } h2 { color: #4CAF50; margin-top: 0; }</style>");
         out.println("</head><body>");
+
+        request.getRequestDispatcher("/navbar.jsp").include(request, response);
 
         if (targetTitle == null || targetTitle.isEmpty()) {
             out.println("<h3>Error: No recipe title provided in the URL.</h3>");
