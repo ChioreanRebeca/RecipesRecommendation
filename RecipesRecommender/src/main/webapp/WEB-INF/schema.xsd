@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="Data">
+        <xs:complexType>
+            <xs:sequence>
+
+                <xs:element name="User">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="FirstName" type="xs:string"/>
+                            <xs:element name="LastName" type="xs:string"/>
+                            <xs:element name="SkillLevel" type="xs:string"/>
+                            <xs:element name="PreferredCuisine" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="Recipes">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Recipe" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Title" type="xs:string"/>
+                                        <xs:element name="CuisineType" type="xs:string"/>
+                                        <xs:element name="Difficulty" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
