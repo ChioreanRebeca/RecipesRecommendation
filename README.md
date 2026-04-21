@@ -1,12 +1,12 @@
 # RecipesRecommendation
+
+## Overview
 A web application in Java to facilitate the recommendation of suitable recipes to a certain user.
 
-Team members:
-- Chiorean Rebeca 1241EA
-- Liță Naomi 1241EA
+## Team Members & Contributions
+This project was collaboratively built by:
+* **Chiorean Rebeca** (Group 1241EA) – Backend Development
+* **Liță Naomi** (Group 1241EA) – UI/UX & Web Scraping
 
-Contributions:
-- UI and Web Scrape -> Lita Naomi
-- Backend -> Chiorean Rebeca
-
-Link to github repository: https://github.com/ChioreanRebeca/RecipesRecommendation
+## Repository
+[RecipesRecommendation on GitHub](https://github.com/ChioreanRebeca/RecipesRecommendation)
