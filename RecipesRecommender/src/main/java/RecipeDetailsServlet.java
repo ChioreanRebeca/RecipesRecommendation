@@ -25,23 +25,21 @@ public class RecipeDetailsServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
 
-
         String targetTitle = request.getParameter("title");
 
         out.println("<html><head><title>Recipe Details</title>");
-        out.println("<style>body { font-family: Arial; padding: 20px; } .card { border: 1px solid #ddd; padding: 20px; max-width: 400px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); } h2 { color: #4CAF50; margin-top: 0; }</style>");
+        out.println("<style>body { font-family: Arial; background-color: #FAEEE7; margin: 0; padding: 0; } .card { background: white; border: 1px solid #ddd; padding: 20px; max-width: 400px; margin: 40px auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); } h2 { color: #FF8BA7; margin-top: 0; } a { color: #FF8BA7; font-weight: bold; text-decoration: none; }</style>");
         out.println("</head><body>");
 
         request.getRequestDispatcher("/navbar.jsp").include(request, response);
 
         if (targetTitle == null || targetTitle.isEmpty()) {
-            out.println("<h3>Error: No recipe title provided in the URL.</h3>");
-            out.println("<br><a href='" + request.getContextPath() + "/recipes'>Back to All Recipes</a></body></html>");
+            out.println("<div class='card'><h3>Error: No recipe title provided in the URL.</h3>");
+            out.println("<br><a href='" + request.getContextPath() + "/recipes'>Back to All Recipes</a></div></body></html>");
             return;
         }
 
         try {
-
             String filePath = getServletContext().getRealPath("/WEB-INF/recipes_data.xml");
             File xmlFile = new File(filePath);
 
@@ -50,16 +48,11 @@ public class RecipeDetailsServlet extends HttpServlet {
             Document doc = dBuilder.parse(xmlFile);
             doc.getDocumentElement().normalize();
 
-
             XPathFactory xPathfactory = XPathFactory.newInstance();
             XPath xpath = xPathfactory.newXPath();
 
-
             String recipeExpr = "/Data/Recipes/Recipe[Title='" + targetTitle + "']";
-
-
             Node recipeNode = (Node) xpath.evaluate(recipeExpr, doc, XPathConstants.NODE);
-
 
             if (recipeNode != null && recipeNode.getNodeType() == Node.ELEMENT_NODE) {
                 Element recipe = (Element) recipeNode;
@@ -73,10 +66,10 @@ public class RecipeDetailsServlet extends HttpServlet {
                 out.println("<p><strong>Difficulty Level:</strong> " + difficulty + "</p>");
                 out.println("</div>");
             } else {
-                out.println("<h3>Recipe not found!</h3>");
+                out.println("<div class='card'><h3>Recipe not found!</h3></div>");
             }
 
-            out.println("<br><a href='" + request.getContextPath() + "/recipes'>Back to All Recipes</a>");
+            out.println("<div style='text-align:center; margin-top:20px;'><a href='" + request.getContextPath() + "/recipes'>Back to All Recipes</a></div>");
             out.println("</body></html>");
 
         } catch (Exception e) {

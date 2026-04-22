@@ -81,12 +81,10 @@ public class RecipeServlet extends HttpServlet {
 
             String activeUserName = currentUser != null ? currentUser : "John Doe";
 
-            //navbar
             out.println("<html><head><title>All Recipes</title>");
-            out.println("<style>body { font-family: Arial, sans-serif; background-color: #f9f9f9; margin: 0; padding: 0; }</style>");
+            out.println("<style>body { font-family: Arial, sans-serif; background-color: #FAEEE7; margin: 0; padding: 0; }</style>");
             out.println("</head><body>");
             request.getRequestDispatcher("/navbar.jsp").include(request, response);
-
 
             Source xmlSource = new StreamSource(xmlFile);
             Source xslSource = new StreamSource(new File(xslPath));

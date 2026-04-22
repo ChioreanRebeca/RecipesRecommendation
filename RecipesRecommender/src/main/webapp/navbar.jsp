@@ -16,7 +16,7 @@
 <style>
     /* Global Navbar Styling */
     .global-nav {
-        background-color: #2e7d32; /* Deep Green */
+        background-color: #FF8BA7; /* <- Dark Pink, prev:  #2e7d32 Deep Green */
         color: white;
         display: flex;
         justify-content: space-between;
@@ -43,7 +43,9 @@
     }
 
     .nav-links a:hover {
-        background-color: #4CAF50;
+        background-color: #FFC6C7;
+        color: #333;
+        /* Medium pink when hovering */
     }
 
     .user-select-container {
@@ -67,6 +69,7 @@
         <a href="recipes">Home / All Recipes</a>
         <a href="recommendRecipe">Recommendation Dashboard</a>
         <a href="adduser.jsp">Add New User</a>
+        <a href="addrecipe.jsp">Add New Recipe</a>
     </div>
 
     <div class="user-select-container">

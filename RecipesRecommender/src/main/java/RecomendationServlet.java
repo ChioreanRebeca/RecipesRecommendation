@@ -29,42 +29,37 @@ public class RecomendationServlet extends HttpServlet {
         String specificCuisine = request.getParameter("specificCuisine");
         String currentUser = (String) request.getSession().getAttribute("currentUser");
 
-
         out.println("<html><head><title>Recipe Recommendations</title>");
 
-        //css part
         out.println("<style>");
-        out.println("body { font-family: Arial, sans-serif; padding: 20px; background-color: #f4f7f6; color: #333; }");
+        out.println("body { font-family: Arial, sans-serif; padding: 20px; background-color: #FAEEE7; color: #333; margin: 0; }");
         out.println(".card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); max-width: 900px; margin: auto; }");
         out.println(".dashboard { display: flex; justify-content: space-between; gap: 20px; margin-bottom: 30px; }");
-        out.println(".action-box { flex: 1; background: #e8f5e9; padding: 20px; border-radius: 8px; text-align: center; border: 1px solid #c8e6c9; }");
-        out.println(".btn { display: inline-block; background: #4CAF50; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-weight: bold; border: none; cursor: pointer; margin-top: 10px; }");
-        out.println(".btn:hover { background: #45a049; }");
+        out.println(".action-box { flex: 1; background: #C3F0CA; padding: 20px; border-radius: 8px; text-align: center; border: 1px solid #FFC6C7; }");
+        out.println(".btn { display: inline-block; background: #FF8BA7; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-weight: bold; border: none; cursor: pointer; margin-top: 10px; }");
+        out.println(".btn:hover { background: #FFC6C7; color: #333; }");
         out.println("table { border-collapse: collapse; width: 100%; margin-top: 20px; }");
         out.println("th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }");
-        out.println("th { background-color: #4CAF50; color: white; }");
+        out.println("th { background-color: #FF8BA7; color: white; }");
         out.println("</style></head><body>");
 
         request.getRequestDispatcher("/navbar.jsp").include(request, response);
         out.println("<div class='card'>");
-        out.println("<h2 style='text-align:center; color: #2e7d32; margin-bottom: 30px;'>Recommendation Dashboard</h2>");
-
+        out.println("<h2 style='text-align:center; color: #FF8BA7; margin-bottom: 30px;'>Recommendation Dashboard</h2>");
 
         out.println("<div class='dashboard'>");
 
         out.println("<div class='action-box'>");
         out.println("<h3>Quick User Match</h3>");
-        out.println("<p style='font-size:14px; color:#555;'>Recommend based  on <b> user cooking skill</b>.</p>");
+        out.println("<p style='font-size:14px; color:#555;'>Recommend based on <b>user cooking skill</b>.</p>");
         out.println("<a href='recommendRecipe?filterType=req6' class='btn'>Match Skill</a>");
         out.println("</div>");
 
-
         out.println("<div class='action-box'>");
         out.println("<h3>Perfect User Match</h3>");
-        out.println("<p style='font-size:14px; color:#555;'>Recommend based on <b> user skill and user favorite cuisine</b>.</p>");
+        out.println("<p style='font-size:14px; color:#555;'>Recommend based on <b>user skill and user favorite cuisine</b>.</p>");
         out.println("<a href='recommendRecipe?filterType=req7' class='btn'>Match Both</a>");
         out.println("</div>");
-
 
         out.println("<div class='action-box'>");
         out.println("<h3>Cuisine Search</h3>");
@@ -79,9 +74,8 @@ public class RecomendationServlet extends HttpServlet {
         out.println("</form>");
         out.println("</div>");
 
-        out.println("</div>"); //end of dashboard
+        out.println("</div>");
         out.println("<hr style='border: 0; border-top: 1px solid #eee; margin: 30px 0;'>");
-
 
         if (filterType != null) {
             try {
@@ -99,7 +93,7 @@ public class RecomendationServlet extends HttpServlet {
                 String recipeExpr = "";
                 String resultMessage = "";
 
-                String userXPath = "/Data/User[1]"; //fallback
+                String userXPath = "/Data/User[1]";
 
                 if (currentUser != null && !currentUser.isEmpty()) {
                     userXPath = "/Data/User[concat(FirstName, ' ', LastName)='" + currentUser + "']";
@@ -123,7 +117,7 @@ public class RecomendationServlet extends HttpServlet {
 
                 NodeList results = (NodeList) xpath.evaluate(recipeExpr, doc, XPathConstants.NODESET);
 
-                out.println("<h3 style='color: #2e7d32;'>" + resultMessage + "</h3>");
+                out.println("<h3 style='color: #FF8BA7;'>" + resultMessage + "</h3>");
                 out.println("<table><tr><th>Recipe Title</th><th>Cuisine</th><th>Difficulty</th></tr>");
 
                 if (results.getLength() > 0) {
@@ -148,7 +142,7 @@ public class RecomendationServlet extends HttpServlet {
             out.println("<h3 style='text-align:center; color:#888;'>Select an option from the dashboard above to view recipes.</h3>");
         }
 
-        out.println("<div style='text-align:center; margin-top:30px;'><a href='" + request.getContextPath() + "/recipes' style='color:#4CAF50; text-decoration:none; font-weight:bold;'>&larr; Back to Main Page</a></div>");
+        out.println("<div style='text-align:center; margin-top:30px;'><a href='" + request.getContextPath() + "/recipes' style='color:#FF8BA7; text-decoration:none; font-weight:bold;'>&larr; Back to Main Page</a></div>");
         out.println("</div></body></html>");
     }
 }

@@ -2,7 +2,7 @@
 <style>
     /* Global Navbar Styling */
     .global-nav {
-        background-color: #2e7d32;
+        background-color: #FF8BA7;
         color: white;
         display: flex;
         justify-content: center;
@@ -23,7 +23,7 @@
         border-radius: 4px;
         transition: background-color 0.3s;
     }
-    .nav-links a:hover { background-color: #4CAF50; }
+    .nav-links a:hover {background-color: #FFC6C7; color: #333; }
 </style>
 
 <div class="global-nav">
@@ -31,5 +31,6 @@
         <a href="recipes">Home / All Recipes</a>
         <a href="recommendRecipe">Recommendation Dashboard</a>
         <a href="adduser.jsp">Add New User</a>
+        <a href="addrecipe.jsp">Add New Recipe</a>
     </div>
 </div>
